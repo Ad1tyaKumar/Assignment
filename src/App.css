@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainDiv {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 30vmax;
+  width: 100vmax;
+  justify-content: space-around;
   align-items: center;
+}
+.mainDiv > div:nth-child(2){
+  width: 10vmax;
+  height: 25vmax;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.mainDiv > div:nth-child(2) >svg{
+  font-size: 1.5vmax;
+}
+.verticalBar{
+  height: 25%;
+  width: 3%;
+  background-color: #d2d2d2;
+  z-index: -1;
+}
+
+.redBar{
+  background-color: crimson;
+}
+.unfoldIcon{
+  height: 2.5vmax;
+  width: 2.5vmax;
+  border-radius: 100%;
+  background-color: crimson;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  align-items: center;
+  cursor: grab;
+}
+.unfoldIcon:active {
+  cursor: grabbing;
+  background-color: rgb(138, 13, 38);
+}
+.unfoldIcon > svg {
+  font-size: 1.4vmax;
   color: white;
+  z-index: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.circle {
+  color: grey;
+  background-color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tick{
+  color: crimson;
+  background-color: white;
+}
+.cornerContent{
+  font-size: 100px;
 }
