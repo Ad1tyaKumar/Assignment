@@ -8,7 +8,7 @@ const App = () => {
   const handleMouseDrag = (e) => {
 
 
-    /*I calculated the values of clientY on which the scroller should move to a position by 
+    /*I calculated the values of clientY on which the scroller should move to a position, by 
     console logging it, then I logged the height and divided it by the constant 
     value of clientY so I got general formula on which it should move to a particular
     position then I multiplied it with h which will vary on the screen dimensions so it 
@@ -56,15 +56,20 @@ const App = () => {
       <div className='scrollerDiv'>
         {
           position === 1 ? <div onMouseDown={handleMouseDrag} className={'unfoldIcon'}>
+            <div className='tags'>
+              {`Text${position}`}
+            </div>
             <UnfoldMore />
           </div> :
             <CheckCircleOutline onClick={() => setPosition(1)} className='tick' />
         }
         <div className={position > 1 ? `verticalBar redBar` : `verticalBar`}>
-
         </div>
         {
           position === 2 ? <div onMouseDown={handleMouseDrag} className='unfoldIcon'>
+            <div className='tags'>
+              {`Text${position}`}
+            </div>
             <UnfoldMore />
           </div> : position > 2 ?
             <CheckCircleOutline onClick={() => setPosition(2)} className='tick' />
@@ -72,10 +77,12 @@ const App = () => {
             <RadioButtonUnchecked onClick={() => setPosition(2)} className='circle' />
         }
         <div className={position > 2 ? 'verticalBar redBar' : 'verticalBar'}>
-
         </div>
         {
           position === 3 ? <div onMouseDown={handleMouseDrag} className='unfoldIcon'>
+            <div className='tags'>
+              {`Text${position}`}
+            </div>
             <UnfoldMore />
           </div> : position > 3 ?
 
@@ -84,10 +91,12 @@ const App = () => {
             <RadioButtonUnchecked onClick={() => setPosition(3)} className='circle' />
         }
         <div className={position > 3 ? 'verticalBar redBar' : 'verticalBar'}>
-
         </div>
         {
           position === 4 ? <div onMouseDown={handleMouseDrag} className='unfoldIcon'>
+            <div className='tags'>
+              {`Text${position}`}
+            </div>
             <UnfoldMore />
           </div> : <RadioButtonUnchecked onClick={() => setPosition(4)} className='circle' />
         }
